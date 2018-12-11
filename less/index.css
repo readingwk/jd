@@ -1,0 +1,486 @@
+/* 定义jd主题色变量 */
+/* 1. 放样式初始化 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端都会设置盒模型为border-box */
+  box-sizing: border-box;
+  /* 去掉内边框 */
+  outline: 0;
+  /* 去除a标签的按住高亮背景色 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select {
+  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 */
+  /* 另外，select加上这个属性后，select的高度就可以改变了 */
+  -webkit-appearance: none;
+}
+/* 去掉小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* 去除图片3px间隙 */
+  vertical-align: middle;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  /* 设置a标签的高亮背景色 手指按住的时候会出现 */
+  -webkit-tap-highlight-color: transparent;
+  color: #666;
+}
+/* 样式初始化 */
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  /* 默认网页字体都使用了14px */
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a:active {
+  outline: 0;
+}
+a:active {
+  color: #006699;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+  border: 0;
+  outline: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+/* 2. 放所有页面都会用到公共类 */
+/* 边框的公共类名 */
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+/* 头部的公共样式 */
+#header {
+  width: 100vw;
+  height: 0.515625000201416rem;
+  background-color: #f7f7f7;
+  display: flex;
+  text-align: center;
+  line-height: 0.515625000201416rem;
+}
+#header .place {
+  font-size: 0.1640625000640869rem;
+  width: 0.3515625001373291rem;
+  height: 0.515625000201416rem;
+}
+#header .place span {
+  color: #d3079e;
+}
+#header h2 {
+  line-height: 0.515625000201416rem;
+  flex: 1;
+  font-weight: normal;
+}
+#header .self {
+  padding: 0.11718750004577635rem;
+  width: 0.515625000201416rem;
+  height: 0.515625000201416rem;
+  background-image: url("../images/icon/my.png");
+  background-repeat: no-repeat;
+  background-size: 0.2812500001098633rem 0.2812500001098633rem;
+  background-clip: content-box;
+  background-origin: content-box;
+}
+#slide img {
+  width: 100vw;
+}
+#replace {
+  padding: 0.04687500001831054rem 0px 0.09375000003662108rem 0.04687500001831054rem;
+}
+#replace ul {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+#replace ul li {
+  flex: 33.33%;
+  padding: 0.04687500001831054rem 0.04687500001831054rem 0 0;
+}
+#replace ul li a {
+  display: block;
+}
+#replace ul li a img {
+  width: 100%;
+}
+#nav {
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  flex: 25%;
+  border-top: 0.011718750004577635rem solid #e6e6e6;
+  border-right: 0.011718750004577635rem solid #e6e6e6;
+}
+#nav ul li a {
+  display: block;
+}
+#nav ul li a img {
+  width: 100%;
+}
+#main {
+  padding-top: 0.17578125006866455rem ;
+}
+#main #child {
+  display: flex;
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+}
+#main #child .child-left {
+  width: 50vw;
+  border-right: 0.011718750004577635rem solid #e6e6e6;
+}
+#main #child .child-left a {
+  display: block;
+}
+#main #child .child-left a img {
+  width: 100%;
+}
+#main #child .child-right {
+  width: 50vw;
+}
+#main #child .child-right a {
+  display: block;
+}
+#main #child .child-right a:nth-of-type(2) {
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+}
+#main #child .child-right a img {
+  width: 100%;
+}
+#main #hotactive {
+  padding-bottom: 0.17578125006866455rem;
+}
+#main #hotactive span {
+  font-size: 0.18750000007324216rem;
+  padding-left: 0.17578125006866455rem;
+  line-height: 0.41015625016021723rem;
+}
+#main #hotactive ul {
+  border-top: 0.011718750004577635rem solid #e6e6e6;
+}
+#main #hotactive ul li {
+  width: 100vw;
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+}
+#main #hotactive ul li a {
+  display: block;
+}
+#main #hotactive ul li a img {
+  width: 100%;
+}
+#main #weekend .weekend-title {
+  height: 0.515625000201416rem;
+  border-top: 0.011718750004577635rem solid #e6e6e6;
+  display: flex;
+  text-align: center;
+}
+#main #weekend .weekend-title a {
+  display: block;
+}
+#main #weekend .weekend-title a:nth-of-type(1) {
+  width: 50vw;
+}
+#main #weekend .weekend-title a:nth-of-type(2) {
+  width: 50vw;
+}
+#main #weekend .weekend-title a span {
+  display: inline-block;
+  font-size: 0.18750000007324216rem;
+  line-height: 0.515625000201416rem;
+}
+#main #weekend .weekend-title a span.active {
+  color: #d3079e;
+  border-bottom: 0.02343750000915527rem solid #d3079e;
+}
+#main #weekend .weekend-content ul li {
+  width: 100vw;
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+  padding-bottom: 0.17578125006866455rem;
+}
+#main #weekend .weekend-content ul li a {
+  display: block;
+}
+#main #weekend .weekend-content ul li a img {
+  width: 100%;
+}
+#main #weekend .weekend-content ul li a p:first-child {
+  font-size: 0.1640625000640869rem;
+  color: #000000;
+}
+#main #weekend .weekend-content ul li a p:last-child {
+  font-size: 0.18750000007324216rem;
+}
+#main #weekend .more {
+  height: 0.3515625001373291rem;
+  width: 100vw;
+  text-align: center;
+  border-bottom: 0.011718750004577635rem solid #e6e6e6;
+  margin-top: 0.17578125006866455rem;
+}
+#main #weekend .more a {
+  display: block;
+}
+#main #weekend .more a::after {
+  content: "v";
+}
+#footer {
+  width: 100vw;
+  height: 0.3515625001373291rem;
+  background-color: #d3079e;
+  line-height: 0.3515625001373291rem;
+  margin-top: 0.17578125006866455rem;
+}
+#footer a {
+  display: block;
+  float: left;
+  color: #fff;
+}
+#footer a:nth-child(1) {
+  margin-left: 0.10546875004119872rem;
+}
+#footer a:nth-child(2) {
+  margin-left: 0.2343750000915527rem;
+}
+#footer a:nth-child(3) {
+  float: right;
+  margin-right: 0.11718750004577635rem;
+}

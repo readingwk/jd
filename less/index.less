@@ -1,0 +1,237 @@
+@import 'base.less';
+
+#header{
+    width: 100vw;
+    height: 0.515625000201416rem;
+    background-color: #f7f7f7;
+    display: flex;
+    text-align: center;
+    // padding: 0.11718750004577635rem;
+    line-height: 0.515625000201416rem;
+    // overflow: hidden;
+    .place{
+        // display: block;
+        font-size: 0.1640625000640869rem;
+        width: 0.3515625001373291rem;
+        height: 0.515625000201416rem;
+        span{
+            color: #d3079e;
+           
+        }
+    }
+    h2{
+        // text-align: center;
+        line-height: 0.515625000201416rem;
+        flex: 1;
+        font-weight: normal;
+    }
+    .self{
+        padding: 0.11718750004577635rem;
+        width: 0.515625000201416rem;
+        height: 0.515625000201416rem;
+        background-image: url("../images/icon/my.png");
+        background-repeat: no-repeat;
+        background-size: 0.2812500001098633rem 0.2812500001098633rem;
+        background-clip: content-box;
+        background-origin: content-box;
+    }
+}
+
+#slide{
+    // width: 100vw;
+                img{
+                    width: 100vw;
+                }
+            
+}
+
+// 推荐模块
+#replace {
+    padding:0.04687500001831054rem 0px 0.09375000003662108rem 0.04687500001831054rem;
+    ul{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        display: flex;
+        li{
+            flex: 33.33%;
+            padding:0.04687500001831054rem 0.04687500001831054rem 0 0;
+            a{
+                display: block;
+                img{
+                width:100%;
+                }
+            }
+        }
+    }
+}
+
+// 导航模块
+
+#nav{
+    border-bottom: 0.011718750004577635rem solid #e6e6e6;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            flex: 25%;
+            border-top: 0.011718750004577635rem solid #e6e6e6;
+            border-right:  0.011718750004577635rem solid #e6e6e6;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// 注意内容区域
+
+#main{
+    padding-top:0.17578125006866455rem ;
+    // 亲子游模块
+    #child {
+        display: flex;
+        border-bottom: 0.011718750004577635rem solid #e6e6e6;
+        .child-left{
+            width: 50vw;
+            border-right: 0.011718750004577635rem solid #e6e6e6;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .child-right{
+           width: 50vw;
+            a{
+                display: block;
+                &:nth-of-type(2){
+                    border-bottom: 0.011718750004577635rem solid #e6e6e6;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #hotactive{
+        padding-bottom: 0.17578125006866455rem;
+        span{
+            
+            font-size: 0.18750000007324216rem;
+            padding-left: 0.17578125006866455rem;
+            line-height: 0.41015625016021723rem;
+        }
+        ul{
+            border-top: 0.011718750004577635rem solid #e6e6e6;
+            li{
+                width: 100vw;
+                border-bottom: 0.011718750004577635rem solid #e6e6e6;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #weekend{
+       .weekend-title{
+           height: 0.515625000201416rem;
+           border-top: 0.011718750004577635rem solid #e6e6e6;
+           display: flex;
+           text-align: center;
+           a{  
+              
+                &:nth-of-type(1){
+                    width: 50vw;
+                }
+                &:nth-of-type(2){
+                    width: 50vw;
+                }           
+                  display: block;
+              span{
+                  display: inline-block;
+                //   width: 100%;
+                  font-size: 0.18750000007324216rem;
+                  line-height: 0.515625000201416rem;
+                  &.active{
+                      color: #d3079e;
+                      border-bottom: 0.02343750000915527rem solid #d3079e;
+                  }
+              }
+           }
+       }
+       .weekend-content{
+           ul{
+               li{
+                   width: 100vw;
+                   border-bottom: 0.011718750004577635rem solid #e6e6e6;
+                   padding-bottom: 0.17578125006866455rem;
+                   a{
+                       display: block;
+                       img{
+                           width: 100%;
+                       }
+                       p{
+                        &:first-child{
+                            font-size: 0.1640625000640869rem;
+                            color: #000000;
+                        }
+                        &:last-child{
+                            font-size: 0.18750000007324216rem;
+                        }  
+                       }
+                   }
+               }
+           }
+       }
+       .more {
+           height: 0.3515625001373291rem;
+           width: 100vw;
+            text-align: center; 
+            border-bottom: 0.011718750004577635rem solid #e6e6e6;
+            margin-top: 0.17578125006866455rem;           
+           a{
+               display: block;
+               &::after{
+                   content:"v";
+               }
+           }
+       }
+    }
+
+    
+}
+
+//底部模块
+
+#footer{
+    width: 100vw;
+    height: 0.3515625001373291rem;
+    background-color:#d3079e;
+   line-height: 0.3515625001373291rem;
+   margin-top: 0.17578125006866455rem;
+
+    a{
+        display: block;
+        float: left;
+        color: #fff;
+        &:nth-child(1){
+            margin-left: 0.10546875004119872rem;
+        }
+        &:nth-child(2){
+            margin-left: 0.2343750000915527rem;
+        }
+        &:nth-child(3){
+            float: right;
+            margin-right: 0.11718750004577635rem;
+        }
+
+    }
+}

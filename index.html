@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script>
+            // 因为这个JS对页面渲染有影响放到前面写
+            function getHtmlFontsize() {
+                // 假设一个设计稿的宽 750
+                var DesignWidth = 640;
+                var DesignFontSize = 200;
+                // 获取当前视口的宽度
+                var nowWidth = document.documentElement.clientWidth;
+                /*750 / 200 == 375 / 100
+                 设计稿宽度 / 设计稿根元素 == 当前屏幕宽度 / 当前屏幕根元素
+                 375 / (750 / 200) == 100
+                 当屏幕宽度  / (设计稿宽度 / 设计稿的根元素)
+                 320 / (750 / 200)  == 85.3333px */
+                /* 4 / 2 == 2 / x
+                 2 / ( 4 / 2 )  == 1*/
+                var nowFontSize = nowWidth / (DesignWidth / DesignFontSize);
+                document.documentElement.style.fontSize = nowFontSize + 'px';
+            }
+            getHtmlFontsize();
+            window.addEventListener('resize', getHtmlFontsize);
+            </script>
+
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部模块 -->
+    <header id="header">
+        <a href="#" class="place">
+            <span> 上海 v</span>
+        </a>
+        <h2>驴妈妈旅游网</h2>
+        <a href="#" class="self"></a>
+    </header>
+
+    <!-- 轮播图模块 -->
+    <section id="slide">
+        <div class="swiper-container">
+            <!-- 所有图片容器 -->
+            <div class="swiper-wrapper">
+                <!-- 每个轮播图 -->
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="images/img/banner6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </section>
+
+    <!-- 推荐模块 -->
+    <section id="replace">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav3.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav4.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav5.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/nav6.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 导航模块 -->
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j3.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j4.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j5.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j6.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j7.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/icon/j8.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- 主体内容区域 -->
+    <main id="main">
+        <section id="child">
+            <div class="child-left">
+                <a href="#">
+                    <img src="./images/img/t1.jpg" alt="">
+                </a>
+            </div>
+            <div class="child-right">
+                <a href="#">
+                    <img src="./images/img/t2.jpg" alt="">
+                </a>
+                <a href="#">
+                    <img src="./images/img/t3.jpg" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- 热门活动模块 -->
+        <section id="hotactive">
+            <span>热门活动</span>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./images/img/r1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/img/r2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/img/r3.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/img/r4.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="weekend">
+            <div class="weekend-title">
+                <a href="#">
+                    <span class="active">度周末</span>
+                </a>
+                <a href="#">
+                    <span>度长假</span>
+                </a>
+            </div>
+            <div class="weekend-content">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./images/img/zm1.jpg" alt="">
+                            <p>[热门活动]驴妈妈温泉季</p>
+                            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全新为例,5折整点秒杀,立减高达100元</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/img/zm2.jpg" alt="">
+                            <p>[热门活动]春节抢票啦</p>
+                            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全新为例,5折整点秒杀,立减高达100元</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/img/zm3.jpg" alt="">
+                            <p>[热门活动]门票元旦欢</p>
+                            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全新为例,5折整点秒杀,立减高达100元</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/img/zm4.jpg" alt="">
+                            <p>[热门活动]上海月亮船</p>
+                            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全新为例,5折整点秒杀,立减高达100元</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/img/zm5.jpg" alt="">
+                            <p>[热门活动]上海欢乐谷</p>
+                            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全新为例,5折整点秒杀,立减高达100元</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="more">
+                <a href="#">
+                    查看更多
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    <footer id="footer">
+        <a href="#">
+            免费注册
+        </a>
+        <a href="#">登录</a>
+        <a href="#">TOP</a>
+
+    </footer>
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
